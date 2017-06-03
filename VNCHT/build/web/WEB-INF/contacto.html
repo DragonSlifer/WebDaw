@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+  <head>
+    <title>Contacto</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/CSS" href="estilo.CSS">
+  </head>
+  <body>
+  <contacto>
+    <ul id="lcontacto">
+      <li>Correo electrónico: valvenocuentahasta3@vnch3.es</li>
+      <li>Teléfono de atención al cliente: xxx-xxx-xxx</li>
+      <li>Manda un correo:
+        <ul id="correoat">
+          <li>Introduce tu correo <input autocomplete="on" required="required"
+
+              name="email" type="email"></li>
+          <li>Mensaje:<br>
+            <textarea required="required" name="mensaje"></textarea></li>
+          <li>¿Hasta cuanto no cuenta valve?: <input autocomplete="off" name="capcha"
+
+              required="required" type="number"> </li>
+          <li><button formenctype="text/plain" formmethod="post" name="enviar">Enviar
+              mensaje</button></li>
+        </ul>
+        </li>
+    </ul>
+  </contacto>
+  </body>
+</html>
