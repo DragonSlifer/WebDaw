@@ -50,7 +50,7 @@ public class ProcesarLoginAdmin extends HttpServlet {
         } else {
             sesion.setAttribute("Mensaje", "Falta introducir el usuario o la clave"); //Registramos el error en el entorno de la sesión
         }
-        response.sendRedirect("MostrarLogin.jsp");
+        response.sendRedirect("menuAdmin.html");
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
