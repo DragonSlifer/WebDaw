@@ -38,10 +38,11 @@ public class ProcesarLoginAdmin extends HttpServlet {
 
         if ((nick != null) && (password != null)) //Se comprueba si el usuario y la clave están en la BD
         {
-            if (baseDatos.comprobarUsuarioBD(nick, password)) {
+            if (baseDatos.comprobarAdminBD(nick, password)) {
 
                 sesion.setAttribute("administrador", nick); //Registramos al usuario en el entorno de la sesión
                 System.out.println("Si sale bien, aparece: " + (String) sesion.getAttribute("administrador"));
+                
             } else //El usuario/clave no se encuentra en la BD
             {
                 sesion.setAttribute("Mensaje", "La contraseña o el usuario son incorrectos. ¿Estás seguro que"
@@ -50,7 +51,7 @@ public class ProcesarLoginAdmin extends HttpServlet {
         } else {
             sesion.setAttribute("Mensaje", "Falta introducir el usuario o la clave"); //Registramos el error en el entorno de la sesión
         }
-        response.sendRedirect("menuAdmin.html");
+        response.sendRedirect("loginAdmin.jsp");
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
